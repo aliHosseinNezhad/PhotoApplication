@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="1dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/error_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="error message"
+                tools:visibility="visible" />
+
+            <com.victor.loading.rotate.RotateLoading
+                android:id="@+id/progressBar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:loading_color="#304FFE"
+                app:loading_width="5dp" />
+
+            <ImageView
+                android:id="@+id/photo_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#1D000000"
+                android:elevation="0dp"
+                android:scaleType="centerCrop"
+                android:transitionName="t"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/shadow_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bottom_view"
+                android:elevation="1dp"
+                app:layout_constraintBottom_toBottomOf="@id/photo_imageView"
+                app:layout_constraintDimensionRatio="7:1"
+                app:layout_constraintEnd_toEndOf="@id/photo_imageView"
+                app:layout_constraintStart_toStartOf="@id/photo_imageView" />
+
+            <ImageButton
+                android:id="@+id/download_btn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/simple_back_ripple"
+                android:elevation="2dp"
+                android:src="@android:drawable/stat_sys_download"
+                app:layout_constraintBottom_toBottomOf="@id/photo_imageView"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@id/photo_imageView"
+                app:layout_constraintTop_toTopOf="@+id/shadow_view" />
+
+            <ImageButton
+                android:id="@+id/favorite_btn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/simple_back_ripple"
+                android:elevation="2dp"
+                android:padding="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/favorite_pink"
+                app:layout_constraintBottom_toBottomOf="@id/photo_imageView"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@id/download_btn"
+                app:layout_constraintTop_toTopOf="@id/shadow_view" />
+
+            <TextView
+                android:id="@+id/web_site_name"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:elevation="2dp"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:lines="1"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toBottomOf="@id/photo_imageView"
+                app:layout_constraintDimensionRatio="3:1"
+                app:layout_constraintStart_toStartOf="@id/photo_imageView"
+                app:layout_constraintTop_toTopOf="@id/shadow_view"
+                tools:text="some thingsdfasdf" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

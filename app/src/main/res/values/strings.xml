@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PhotoApplication</string>
+    <string name="gallery">gallery</string>
+    <string name="web_photo">web photo</string>
+    <string name="Gallery">Gallery</string>
+    <string name="photosList">photosList</string>
+    <string name="currentItem">currentItem</string>
+    <string name="select_all">select all</string>
+    <string name="selection">selection</string>
+    <string name="select_count">%d items selected</string>
+    <string name="delete">delete</string>
+</resources>
